@@ -8,17 +8,35 @@ namespace Ace\OrderDeliveryDate\Model\Config\Source;
  *
  * @package Ace\OrderDeliveryDate\Model\Config\Source
  */
-class Displayat implements \Magento\Framework\Option\ArrayInterface
+class Displayat implements \Magento\Framework\Data\OptionSourceInterface
 {
 
+    const DELIVERY_DATE_AT_SHIPPING_ADDRESS = 0;
+    const DELIVERY_DATE_AT_SHIPPING_METHOD = 1;
+    const DELIVERY_DATE_AT_REVIEW_PAYMENTS = 2;
+
+    /**
+     * Return array of options as value-label pairs
+     *
+     * @return void
+     */
     public function toOptionArray()
     {
-        return [['value' => 'Shipping Address', 'label' => __('Shipping Address')],['value' => 'Shipping Method', 'label' => __('Shipping Method')],['value' => 'Review & Payments', 'label' => __('Review & Payments')]];
+        return [['value' => self::DELIVERY_DATE_AT_SHIPPING_ADDRESS, 'label' => __('Shipping Address')],
+                ['value' => self::DELIVERY_DATE_AT_SHIPPING_METHOD, 'label' => __('Shipping Method')],
+                ['value' => self::DELIVERY_DATE_AT_REVIEW_PAYMENTS, 'label' => __('Review & Payments')]];
     }
 
+    /**
+     * Return array of options as value-label pairs
+     *
+     * @return void
+     */
     public function toArray()
     {
-        return ['Shipping Address' => __('Shipping Address'),'Shipping Method' => __('Shipping Method'),'Review & Payments' => __('Review & Payments')];
+        return [self::DELIVERY_DATE_AT_SHIPPING_ADDRESS => __('Shipping Address'),
+                self::DELIVERY_DATE_AT_SHIPPING_METHOD => __('Shipping Method'),
+                self::DELIVERY_DATE_AT_REVIEW_PAYMENTS => __('Review & Payments')];
     }
 }
 
