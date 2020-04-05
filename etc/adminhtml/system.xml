@@ -25,9 +25,9 @@
 					<label>Time Slots</label>
 					<comment/>
 				</field>
-				<field id="dateformat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+				<field id="dateformat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Date Format</label>
-					<comment/>
+					<source_model>Ace\OrderDeliveryDate\Model\Config\Source\Dateformat</source_model>
 				</field>
 				<field id="iconcalendar" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
 					<label>Icon Calendar</label>

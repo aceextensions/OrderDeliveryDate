@@ -22,9 +22,12 @@ class Displayat implements \Magento\Framework\Data\OptionSourceInterface
      */
     public function toOptionArray()
     {
-        return [['value' => self::DELIVERY_DATE_AT_SHIPPING_ADDRESS, 'label' => __('Shipping Address')],
-                ['value' => self::DELIVERY_DATE_AT_SHIPPING_METHOD, 'label' => __('Shipping Method')],
-                ['value' => self::DELIVERY_DATE_AT_REVIEW_PAYMENTS, 'label' => __('Review & Payments')]];
+        return [['value' => self::DELIVERY_DATE_AT_SHIPPING_ADDRESS, 
+                 'label' => __('Shipping Address')],
+                ['value' => self::DELIVERY_DATE_AT_SHIPPING_METHOD, 
+                 'label' => __('Shipping Method')],
+                ['value' => self::DELIVERY_DATE_AT_REVIEW_PAYMENTS, 
+                 'label' => __('Review & Payments')]];
     }
 
     /**
