@@ -1,0 +1,10 @@
+
+type StoreConfig {
+    
+    orderdeliverydate_general_enabled  : String  @doc(description: "Query by orderdeliverydate_general_enabled.") ,
+    orderdeliverydate_general_processingtime  : String  @doc(description: "Query by orderdeliverydate_general_processingtime.") ,
+    orderdeliverydate_general_displayat  : String  @doc(description: "Query by orderdeliverydate_general_displayat.") ,
+    orderdeliverydate_general_timeslots  : String  @doc(description: "Query by orderdeliverydate_general_timeslots.") ,
+    orderdeliverydate_general_dateformat  : String  @doc(description: "Query by orderdeliverydate_general_dateformat.") ,
+    orderdeliverydate_general_iconcalendar  : String  @doc(description: "Query by orderdeliverydate_general_iconcalendar.") ,
+}

@@ -1,0 +1,26 @@
+{
+    "name": "ace/module-orderdeliverydate",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        },
+        {
+            "name": "Durga Shankar Gupta",
+            "email": "durgashankar.gupta@javra.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ace\\OrderDeliveryDate\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

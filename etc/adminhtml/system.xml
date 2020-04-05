@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="orderdeliverydate" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>OrderDeliveryDate</label>
+			<tab>ace</tab>
+			<resource>Ace_OrderDeliveryDate::config_ace_orderdeliverydate</resource>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>General</label>
+				<field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="processingtime" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Processing Time</label>
+					<comment>Delivery will be taken after(x) day(s) upon the date order(s) made.</comment>
+				</field>
+				<field id="displayat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Display At</label>
+					<comment/>
+					<source_model>Ace\OrderDeliveryDate\Model\Config\Source\Displayat</source_model>
+				</field>
+				<field id="timeslots" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Time Slots</label>
+					<comment/>
+				</field>
+				<field id="dateformat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Date Format</label>
+					<comment/>
+				</field>
+				<field id="iconcalendar" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Icon Calendar</label>
+					<comment/>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
