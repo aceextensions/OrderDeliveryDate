@@ -16,15 +16,19 @@
 					<label>Processing Time</label>
 					<comment>Delivery will be taken after(x) day(s) upon the date order(s) made.</comment>
 				</field>
+				
 				<field id="displayat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Display At</label>
 					<comment/>
 					<source_model>Ace\OrderDeliveryDate\Model\Config\Source\Displayat</source_model>
 				</field>
-				<field id="timeslots" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+
+				<field id="timeslots" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Time Slots</label>
-					<comment/>
-				</field>
+					<frontend_model>Ace\OrderDeliveryDate\Model\Config\Source\Timeslots</frontend_model>
+					<backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+            	</field>
+
 				<field id="dateformat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Date Format</label>
 					<source_model>Ace\OrderDeliveryDate\Model\Config\Source\Dateformat</source_model>

@@ -1,18 +1,21 @@
-# Ace OrderDeliveryDate
+
+# Main Functionalities
+
+### Inprogress
+* Allow customers to choose delivery date and time
+* Display Delivery Date & Time 
+
+### Todo
+* Set intervals between order and delivery dates
+* Display Scheduler on the Product Page and at Checkout
+* Same day delivery with custom charges & cut-off time
+* Custom Delivery Option for Magento Customer Groups
+* Choose Date & Time format  
+* Keep a track of Delivery Orders
+* Display Delivery Date & Time with an additional charge 
        
-                ``ace/module-orderdeliverydate``
-                     
-               [Main Functionalities](#markdown-header-main-functionalities)
-               [Installation](#markdown-header-installation)
-                     [Configuration](#markdown-header-configuration)
-               [Specifications](#markdown-header-specifications)
-               [Attributes](#markdown-header-attributes)
-                     
               
-       # Main Functionalities
-       
-              
-       # Installation
+# Installation
 \* = in production please use the `--keep-generated` option
 
 ### Type 1: Zip file
