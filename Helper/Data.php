@@ -4,6 +4,10 @@ namespace Ace\OrderDeliveryDate\Helper;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Store\Model\ScopeInterface as ScopeInterface;
 use Ace\OrderDeliveryDate\Model\Config\Source\Dateformat as Dateformat;
+use Magento\Store\Model\StoreManagerInterface ;
+use Magento\Framework\Stdlib\DateTime\DateTime;
+use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Framework\UrlInterface;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
@@ -15,12 +19,21 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     protected $date;
     protected $timezone;
 
+    /**
+     * Undocumented function
+     *
+     * @param TimezoneInterface $localeDate
+     * @param StoreManagerInterface $storeManager
+     * @param DateTime $date
+     * @param TimezoneInterface $timezone
+     * @param ScopeConfigInterface $scopeConfig
+     */
     public function __construct(
-        \Magento\Framework\Stdlib\DateTime\TimezoneInterface $localeDate,
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Framework\Stdlib\DateTime\DateTime $date,
+        TimezoneInterface $localeDate,
+        StoreManagerInterface $storeManager,
+        DateTime $date,
         TimezoneInterface $timezone,
-        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+        ScopeConfigInterface $scopeConfig
     ) {
         $this->scopeConfig = $scopeConfig;
         $this->localeDate = $localeDate;
@@ -76,6 +89,48 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             }
         }
         return 'mm/dd/yy';
+    }
+
+    
+    public function getTimeSlot()
+    {
+        $time_slots = $this->scopeConfig->getValue(self::ACE_EXTENSION_ORDER_DELIVERY_GENERAL.'time_slots', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $result = [];
+        if ($time_slots) {
+            $time_slot_arr = unserialize($time_slots);
+            if ($time_slot_arr) {
+                foreach ($time_slot_arr as $time_slot) {
+                    $a = $time_slot['note'].' ' . $time_slot['from'] . ' - ' . $time_slot['to'];
+                    $b = ['value' => $a, 'label' => $a];
+                    array_push($result, $b);
+                }
+            }
+        }
+        return $result;
+    }
+
+    public function getStoreTimestamp($store = null)
+    {
+        return $this->localeDate->scopeTimeStamp($store);
+    }
+
+    public function getTimezoneOffsetSeconds()
+    {
+        return $this->date->getGmtOffset();
+    }
+
+    public function getMediaUrl()
+    {
+        return $this->storeManager->getStore()->getBaseUrl(UrlInterface::URL_TYPE_MEDIA);
+    }
+
+    public function getIcon()
+    {
+        $icon =  $this->scopeConfig->getValue(self::ACE_EXTENSION_ORDER_DELIVERY_GENERAL.'icon_calendar', ScopeInterface::SCOPE_STORE);
+        if (!isset($icon)) {
+            return false;
+        }
+        return $this->getMediaUrl() . 'ace/deliverydate/' . $icon;
     }
 
 
