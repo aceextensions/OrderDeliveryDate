@@ -1,0 +1,30 @@
+<!-- ko if: aceOrderDeliveryEnable() -->
+<li class="ace-order-delivery">
+    <div class="delivery_date">
+        <label for="delivery_date" data-bind="i18n: 'Delivery Date'"></label>
+        <div class="control">
+            <input readonly="readonly" id="delivery_date" class="delivery_date"
+                   type="text" size="17" name="delivery_date"
+                   data-bind="afterRender: initDeliveryDate()"/>
+        </div>
+    </div>
+    <!-- ko if: aceOrderDeliveryTimeSlot() -->
+    <div class="delivery_timeslot">
+        <label for="delivery_timeslot" data-bind="i18n: 'Delivery Time Slot'"></label>
+        <div class="delivery_timeslot">
+            <select id="delivery_timeslot"
+                    data-bind="options: listOrderDeliveryTimeSlot(),
+                        optionsText: function(item) {
+                            return item
+                        },
+                        optionsValue: function(item) {
+                            return item
+                        },
+                        optionsCaption: $t('Please select delivery time slot')">
+            </select>
+        </div>
+
+    </div>
+    <!-- /ko -->
+</li>
+<!-- /ko -->

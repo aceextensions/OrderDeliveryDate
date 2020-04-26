@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /*
  * Filename: /project/magento234/magento/app/code/Ace/OrderDeliveryDate/Setup/InstallData.php
  * Path: /project/magento234/magento/app/code/Ace/OrderDeliveryDate/Setup
@@ -11,22 +11,18 @@
 
 namespace Ace\OrderDeliveryDate\Setup;
 
-use Magento\Quote\Setup\QuoteSetupFactory;
-use Magento\Framework\Setup\ModuleDataSetupInterface;
-use Magento\Sales\Setup\SalesSetupFactory;
-use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\InstallDataInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+use Magento\Quote\Setup\QuoteSetupFactory;
+use Magento\Sales\Setup\SalesSetupFactory;
 
-/**
- * Class InstallData
- *
- * @package Ace\OrderDeliveryDate\Setup
- */
+
 class InstallData implements InstallDataInterface
 {
 
-    private $salesSetupFactory;
     private $quoteSetupFactory;
+    private $salesSetupFactory;
 
     /**
      * Constructor
@@ -60,6 +56,17 @@ class InstallData implements InstallDataInterface
             ]
         );
 
+        $quoteSetup = $this->quoteSetupFactory->create(['setup' => $setup]);
+        $quoteSetup->addAttribute('quote', 'delivery_date',
+            [
+                'type' => 'date',
+                'length' => null,
+                'visible' => false,
+                'required' => false,
+                'grid' => true
+            ]
+        );
+
         $salesSetup = $this->salesSetupFactory->create(['setup' => $setup]);
         $salesSetup->addAttribute('order', 'delivery_date',
             [
@@ -70,6 +77,16 @@ class InstallData implements InstallDataInterface
                 'grid' => true
             ]
         );
+
+        $salesSetup = $this->salesSetupFactory->create(['setup' => $setup]);
+        $salesSetup->addAttribute('order', 'delivery_timeslot',
+            [
+                'type' => 'date',
+                'length' => null,
+                'visible' => false,
+                'required' => false,
+                'grid' => true
+            ]
+        );
     }
 }
-

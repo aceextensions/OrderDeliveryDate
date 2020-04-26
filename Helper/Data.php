@@ -8,6 +8,7 @@ use Magento\Store\Model\StoreManagerInterface ;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\UrlInterface;
+use Magento\Framework\Serialize\Serializer\Json;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
@@ -18,6 +19,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     protected $storeManager;
     protected $date;
     protected $timezone;
+    protected $jsonSerializer;
 
     /**
      * Undocumented function
@@ -33,13 +35,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         StoreManagerInterface $storeManager,
         DateTime $date,
         TimezoneInterface $timezone,
-        ScopeConfigInterface $scopeConfig
+        ScopeConfigInterface $scopeConfig,
+        Json $jsonSerializer
     ) {
         $this->scopeConfig = $scopeConfig;
         $this->localeDate = $localeDate;
         $this->date = $date;
         $this->storeManager = $storeManager;
         $this->timezone = $timezone;
+        $this->jsonSerializer = $jsonSerializer;
     }
 
     public function isEnabled()
@@ -94,13 +98,14 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     
     public function getTimeSlot()
     {
-        $time_slots = $this->scopeConfig->getValue(self::ACE_EXTENSION_ORDER_DELIVERY_GENERAL.'time_slots', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $time_slots = $this->scopeConfig->getValue(self::ACE_EXTENSION_ORDER_DELIVERY_GENERAL.'timeslots', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
         $result = [];
+
         if ($time_slots) {
-            $time_slot_arr = unserialize($time_slots);
+            $time_slot_arr = $this->jsonSerializer->unserialize($time_slots);
             if ($time_slot_arr) {
                 foreach ($time_slot_arr as $time_slot) {
-                    $a = $time_slot['note'].' ' . $time_slot['from'] . ' - ' . $time_slot['to'];
+                    $a = $time_slot['note'].' ' . $time_slot['from'][0] . ' - ' . $time_slot['to'][0];
                     $b = ['value' => $a, 'label' => $a];
                     array_push($result, $b);
                 }
