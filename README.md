@@ -1,9 +1,28 @@
 
 # Main Functionalities
 
+#### For Customer:
+* Pick up the expected delivery date and time on the checkout
+* Pick up Time Slots for delivery Date
+* Manage Position for Delevery Date 
+    * Shipping Address
+    * Shipping Method
+    * Review & Payments
+
+* Manage Date Format 
+    * mm/dd/yy (ex: 12/05/2020)
+    * dd-mm-yy (ex: 05-12-2020) 
+    * yy-mm-dd (ex: 2020-12-05)
+
+#### For Admin:
+* Exclude specific day/time from the delivery date based on the availability (toDo)
+* Edit and add order delivery date to related documents (orders, invoices, email, etc.) (toDo)
+* Support API order attributes (toDo)
+
+
 ### Inprogress
-* Allow customers to choose delivery date and time
-* Display Delivery Date & Time 
+* Leave additional information/note for the merchant in delivery comment
+* Manage Processing Time
 
 ### Todo
 * Set intervals between order and delivery dates
