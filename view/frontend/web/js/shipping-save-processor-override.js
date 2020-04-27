@@ -41,6 +41,7 @@ define(
                         shipping_carrier_code: quote.shippingMethod().carrier_code,
                         extension_attributes: {
                             delivery_date: $('#delivery_date').val(),
+                            delivery_comments: $('#delivery_comment').val(),
                             delivery_timeslot: $('#delivery_timeslot').val()
                         }
                     }

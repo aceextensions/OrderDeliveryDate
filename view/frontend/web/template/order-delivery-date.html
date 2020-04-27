@@ -26,5 +26,15 @@
 
     </div>
     <!-- /ko -->
+    
+    <!-- ko if: aceDeliveryComment() -->
+    <div class="delivery_comment">
+        <label for="delivery_comment" data-bind="i18n: 'Delivery Comment'"></label>
+        <div class="datetime-delivery">
+            <textarea id="delivery_comment" class="delivery_comment"
+                   type="text" size="17" name="delivery_comment"></textarea>
+        </div>
+    </div>
+    <!-- /ko -->
 </li>
 <!-- /ko -->

@@ -3,13 +3,16 @@
     <extension_attributes for="Magento\Checkout\Api\Data\ShippingInformationInterface">
         <attribute code="delivery_date" type="string"/>
         <attribute code="delivery_timeslot" type="string"/>
+        <attribute code="delivery_comments" type="string"/>   
     </extension_attributes>
     <extension_attributes for="Magento\Quote\Api\Data\TotalsInterface">
         <attribute code="delivery_date" type="string"/>
         <attribute code="delivery_timeslot" type="string"/>
+        <attribute code="delivery_comments" type="string"/>
     </extension_attributes>
     <extension_attributes for="Magento\Quote\Api\Data\AddressInterface">
         <attribute code="delivery_date" type="string"/>
         <attribute code="delivery_timeslot" type="string"/>
+        <attribute code="delivery_comments" type="string"/>
     </extension_attributes>
 </config>

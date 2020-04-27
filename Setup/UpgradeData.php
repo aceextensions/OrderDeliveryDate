@@ -43,7 +43,7 @@ class UpgradeData implements UpgradeDataInterface
             $salesSetup = $this->salesSetupFactory->create(['setup' => $setup]);
             $salesSetup->addAttribute('order', 'delivery_comments',
                 [
-                    'type' => 'date',
+                    'type' => 'text',
                     'length' => null,
                     'visible' => false,
                     'required' => false,
@@ -54,7 +54,7 @@ class UpgradeData implements UpgradeDataInterface
             $quoteSetup = $this->quoteSetupFactory->create(['setup' => $setup]);
             $quoteSetup->addAttribute('quote', 'delivery_comments',
                 [
-                    'type' => 'date',
+                    'type' => 'text',
                     'length' => null,
                     'visible' => false,
                     'required' => false,

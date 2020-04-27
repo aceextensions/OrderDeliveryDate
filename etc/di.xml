@@ -6,21 +6,19 @@
             <argument name="columns" xsi:type="array">
                 <item name="delivery_date" xsi:type="string">sales_order.delivery_date</item>
                 <item name="delivery_timeslot" xsi:type="string">sales_order.delivery_timeslot</item>
+                <item name="delivery_comments" xsi:type="string">sales_order.delivery_comments</item>
             </argument>
         </arguments>
     </virtualType>
-
 
     <type name="Magento\Checkout\Model\ShippingInformationManagement">
         <plugin name="save-in-quote" type="Aceextensions\OrderDeliveryDate\Model\Plugin\Checkout\ShippingInformationManagementPlugin" 
         sortOrder="11"/>
     </type>
 
-
     <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
         <plugin name="order-delivery-date"
                 type="Aceextensions\OrderDeliveryDate\Block\Plugin\Checkout\LayoutProcessorPlugin" sortOrder="10"/>
     </type>
-
         
 </config>

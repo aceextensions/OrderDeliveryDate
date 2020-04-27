@@ -14,9 +14,12 @@ define(
                     billingAddress['extension_attributes'] = {};
                 }
                 if ($('.checkout-payment-method #delivery_date').length > 0) {
-                    var order_date = '',
+                    var order_comments = '',
+                        order_date = '',
                         order_time_slot = '';
-           
+                    if ($('#delivery_comment').val()) {
+                        billingAddress['extension_attributes']['delivery_comment'] = $('#delivery_comment').val();
+                    }
                     if ($('#delivery_date').val()) {
                         billingAddress['extension_attributes']['delivery_date'] = $('#delivery_date').val();
                     }

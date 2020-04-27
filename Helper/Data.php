@@ -138,5 +138,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return $this->getMediaUrl() . 'aceextensions/deliverydate/' . $icon;
     }
 
+    public function isShowDeliveryComment()
+    {
+        $active =  $this->scopeConfig->getValue(self::ACE_EXTENSION_ORDER_DELIVERY_GENERAL.'delivery_comments', ScopeInterface::SCOPE_STORE);
+        if ($active != 1) {
+            return false;
+        }
+
+        return true;
+    }
+
 
 }

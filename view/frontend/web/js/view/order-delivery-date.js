@@ -23,7 +23,7 @@ define(
 
             aceOrderDeliveryTimeSlot: ko.observable(window.checkoutConfig.aceextensions_has_delivery_timeslot),
 
-           aceShippingComment: ko.observable(window.checkoutConfig.aceextensions_shipping_comment),
+            aceDeliveryComment: ko.observable(window.checkoutConfig.aceextensions_delivery_comment),
 
             listOrderDeliveryTimeSlot: function() {
                 var listTimeSlot = window.checkoutConfig.aceextensions_order_delivery_timeslot;
@@ -61,9 +61,9 @@ define(
                 }
 
                 var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-                
+        
                 return[true, ''];
-                
+        
             }
         });
     }

@@ -32,7 +32,7 @@ class CompositeConfigProvider implements \Magento\Checkout\Model\ConfigProviderI
             $process_time = $this->aceHelper->getProcessingTime();
             
             $output['aceextensions_delivery_process_time'] = $process_time;
-           
+            $output['aceextensions_delivery_comment'] = (boolean) $this->aceHelper->isShowDeliveryComment();
             $output['aceextensions_delivery_date_fomat'] = $this->aceHelper->getDateFormat();
             $output['aceextensions_delivery_current_time'] = $current_time;
             $output['aceextensions_delivery_time_zone'] = $this->aceHelper->getTimezoneOffsetSeconds();

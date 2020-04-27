@@ -61,6 +61,7 @@ class ShippingInformationManagementPlugin
           $extAttributes = $addressInformation->getExtensionAttributes();
           $deliveryDate = $extAttributes->getDeliveryDate();
           $deliveryTimeSlot = $extAttributes->getDeliveryTimeslot();
+          $deliveryComments = $extAttributes->getDeliveryComments();
     
           /**
            * get active cart
@@ -72,6 +73,10 @@ class ShippingInformationManagementPlugin
 
           if (isset($deliveryTimeSlot)) {
             $quote->setDeliveryTimeslot($deliveryTimeSlot);
+          }
+
+          if (isset($deliveryComments)) {
+            $quote->setDeliveryComments($deliveryComments);
           }
 
         }
