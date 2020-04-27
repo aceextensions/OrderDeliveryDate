@@ -1,9 +1,9 @@
 <?php
-namespace Ace\OrderDeliveryDate\Helper;
+namespace Aceextensions\OrderDeliveryDate\Helper;
 
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Store\Model\ScopeInterface as ScopeInterface;
-use Ace\OrderDeliveryDate\Model\Config\Source\Dateformat as Dateformat;
+use Aceextensions\OrderDeliveryDate\Model\Config\Source\Dateformat as Dateformat;
 use Magento\Store\Model\StoreManagerInterface ;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -135,7 +135,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         if (!isset($icon)) {
             return false;
         }
-        return $this->getMediaUrl() . 'ace/deliverydate/' . $icon;
+        return $this->getMediaUrl() . 'aceextensions/deliverydate/' . $icon;
     }
 
 

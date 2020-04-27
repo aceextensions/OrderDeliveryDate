@@ -4,7 +4,7 @@
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="ace_deliverydate" xsi:type="object">Ace\OrderDeliveryDate\Model\CompositeConfigProvider</item>
+                <item name="aceextensions_deliverydate" xsi:type="object">Aceextensions\OrderDeliveryDate\Model\CompositeConfigProvider</item>
             </argument>
         </arguments>
     </type>

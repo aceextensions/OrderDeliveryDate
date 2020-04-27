@@ -9,7 +9,7 @@ declare(strict_types=1);
  * Copyright (c) 2020 Your Company
  */
 
-namespace Ace\OrderDeliveryDate\Setup;
+namespace Aceextensions\OrderDeliveryDate\Setup;
 
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;

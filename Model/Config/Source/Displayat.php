@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Ace\OrderDeliveryDate\Model\Config\Source;
+namespace Aceextensions\OrderDeliveryDate\Model\Config\Source;
 
 /**
  * Class Displayat
  *
- * @package Ace\OrderDeliveryDate\Model\Config\Source
+ * @package Aceextensions\OrderDeliveryDate\Model\Config\Source
  */
 class Displayat implements \Magento\Framework\Data\OptionSourceInterface
 {

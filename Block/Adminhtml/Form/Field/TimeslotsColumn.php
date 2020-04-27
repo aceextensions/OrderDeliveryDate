@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
-namespace Ace\OrderDeliveryDate\Block\Adminhtml\Form\Field;
+namespace Aceextensions\OrderDeliveryDate\Block\Adminhtml\Form\Field;
 
 use Magento\Framework\View\Element\Context;
 use Magento\Framework\View\Element\Html\Select;
-use Ace\OrderDeliveryDate\Model\Config\Source\TimeslotsColumn as TimeslotsColumnSource;
+use Aceextensions\OrderDeliveryDate\Model\Config\Source\TimeslotsColumn as TimeslotsColumnSource;
 
 class TimeslotsColumn extends Select
 {

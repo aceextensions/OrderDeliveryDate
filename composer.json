@@ -1,19 +1,21 @@
 {
-    "name": "ace/module-orderdeliverydate",
+    "name": "aceextensions/module-orderdeliverydate",
     "description": "",
     "type": "magento2-module",
-    "license": "proprietary",
+    "license": "OSL-3.0",
     "authors": [
         {
             "name": "Durga Shankar Gupta",
             "email": "dsguptas@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "minimum-stability": "stable",
+    "require": {
+        "aceextensions/ace-core": "^1.0"
+    },
     "autoload": {
         "psr-4": {
-            "Ace\\OrderDeliveryDate\\": ""
+            "Aceextensions\\OrderDeliveryDate\\": ""
         },
         "files": [
             "registration.php"

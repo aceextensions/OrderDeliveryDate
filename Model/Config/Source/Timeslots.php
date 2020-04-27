@@ -1,9 +1,9 @@
 <?php
-namespace Ace\OrderDeliveryDate\Model\Config\Source;
+namespace Aceextensions\OrderDeliveryDate\Model\Config\Source;
 
 use Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray;
 use Magento\Framework\DataObject;
-use Ace\OrderDeliveryDate\Block\Adminhtml\Form\Field\TimeslotsColumn;
+use Aceextensions\OrderDeliveryDate\Block\Adminhtml\Form\Field\TimeslotsColumn;
 
 class Timeslots extends AbstractFieldArray
 {

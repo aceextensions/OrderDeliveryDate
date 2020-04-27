@@ -1,5 +1,5 @@
 <?php
-namespace Ace\OrderDeliveryDate\Model\Config\Source;
+namespace Aceextensions\OrderDeliveryDate\Model\Config\Source;
 
 class Dateformat implements \Magento\Framework\Data\OptionSourceInterface
 {

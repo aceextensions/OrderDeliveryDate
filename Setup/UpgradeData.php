@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace Ace\OrderDeliveryDate\Setup;
+namespace Aceextensions\OrderDeliveryDate\Setup;
 
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;

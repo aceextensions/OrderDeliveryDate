@@ -12,14 +12,14 @@
 
 
     <type name="Magento\Checkout\Model\ShippingInformationManagement">
-        <plugin name="save-in-quote" type="Ace\OrderDeliveryDate\Model\Plugin\Checkout\ShippingInformationManagementPlugin" 
+        <plugin name="save-in-quote" type="Aceextensions\OrderDeliveryDate\Model\Plugin\Checkout\ShippingInformationManagementPlugin" 
         sortOrder="11"/>
     </type>
 
 
     <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
         <plugin name="order-delivery-date"
-                type="Ace\OrderDeliveryDate\Block\Plugin\Checkout\LayoutProcessorPlugin" sortOrder="10"/>
+                type="Aceextensions\OrderDeliveryDate\Block\Plugin\Checkout\LayoutProcessorPlugin" sortOrder="10"/>
     </type>
 
         

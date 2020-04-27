@@ -1,11 +1,11 @@
 <?php
-namespace Ace\OrderDeliveryDate\Model\Plugin\Checkout;
+namespace Aceextensions\OrderDeliveryDate\Model\Plugin\Checkout;
 
-use Ace\OrderDeliveryDate\Model\Config\Source\Displayat;
+use Aceextensions\OrderDeliveryDate\Model\Config\Source\Displayat;
 use Magento\Checkout\Model\ShippingInformationManagement;
 use Magento\Checkout\Api\Data\ShippingInformationInterface;
 use Magento\Quote\Model\QuoteRepository;
-use Ace\OrderDeliveryDate\Helper\Data;
+use Aceextensions\OrderDeliveryDate\Helper\Data;
 
 class ShippingInformationManagementPlugin
 {
@@ -66,7 +66,7 @@ class ShippingInformationManagementPlugin
            * get active cart
            */
           $quote = $this->quoteRepository->getActive($cartId);
-          if (isset($shippingArrivalDate)) {
+          if (isset($deliveryDate)) {
             $quote->setDeliveryDate($deliveryDate);
           }
 

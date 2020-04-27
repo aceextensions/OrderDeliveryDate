@@ -14,9 +14,9 @@ define(
                     billingAddress['extension_attributes'] = {};
                 }
                 if ($('.checkout-payment-method #delivery_date').length > 0) {
-                        order_date = '',
+                    var order_date = '',
                         order_time_slot = '';
-
+           
                     if ($('#delivery_date').val()) {
                         billingAddress['extension_attributes']['delivery_date'] = $('#delivery_date').val();
                     }

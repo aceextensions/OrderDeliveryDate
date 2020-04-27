@@ -3,8 +3,8 @@
 	<system>
 		<section id="orderdeliverydate" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
 			<label>OrderDeliveryDate</label>
-			<tab>ace</tab>
-			<resource>Ace_OrderDeliveryDate::config_ace_orderdeliverydate</resource>
+			<tab>aceextensions</tab>
+			<resource>Aceextensions_OrderDeliveryDate::config_aceextensions_orderdeliverydate</resource>
 			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
 				<label>General</label>
 				<field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
@@ -20,18 +20,18 @@
 				<field id="displayat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Display At</label>
 					<comment/>
-					<source_model>Ace\OrderDeliveryDate\Model\Config\Source\Displayat</source_model>
+					<source_model>Aceextensions\OrderDeliveryDate\Model\Config\Source\Displayat</source_model>
 				</field>
 
 				<field id="timeslots" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>Time Slots</label>
-					<frontend_model>Ace\OrderDeliveryDate\Model\Config\Source\Timeslots</frontend_model>
+					<frontend_model>Aceextensions\OrderDeliveryDate\Model\Config\Source\Timeslots</frontend_model>
 					<backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
             	</field>
 
 				<field id="dateformat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Date Format</label>
-					<source_model>Ace\OrderDeliveryDate\Model\Config\Source\Dateformat</source_model>
+					<source_model>Aceextensions\OrderDeliveryDate\Model\Config\Source\Dateformat</source_model>
 				</field>
 				<field id="iconcalendar" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
 					<label>Icon Calendar</label>

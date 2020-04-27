@@ -6,7 +6,7 @@
 				<resource id="Magento_Backend::stores">
 					<resource id="Magento_Backend::stores_settings">
 						<resource id="Magento_Config::config">
-							<resource id="Ace_OrderDeliveryDate::config_ace_orderdeliverydate" title="orderdeliverydate"/>
+							<resource id="Aceextensions_OrderDeliveryDate::config_aceextensions_orderdeliverydate" title="orderdeliverydate"/>
 						</resource>
 					</resource>
 				</resource>

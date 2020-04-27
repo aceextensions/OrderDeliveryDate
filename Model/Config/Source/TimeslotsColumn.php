@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Ace\OrderDeliveryDate\Model\Config\Source;
+namespace Aceextensions\OrderDeliveryDate\Model\Config\Source;
 
 class TimeslotsColumn implements \Magento\Framework\Data\OptionSourceInterface
 {
