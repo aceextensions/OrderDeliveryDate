@@ -13,6 +13,7 @@
     * mm/dd/yy (ex: 12/05/2020)
     * dd-mm-yy (ex: 05-12-2020) 
     * yy-mm-dd (ex: 2020-12-05)
+* Leave additional information/note for the merchant in delivery comment
 
 
 #### For Admin:
@@ -22,8 +23,8 @@
 
 
 ### Inprogress
-* Leave additional information/note for the merchant in delivery comment
 * Manage Processing Time
+* Manage Calendar Icon
 
 ### Todo
 * Set intervals between order and delivery dates
@@ -32,7 +33,6 @@
 * Custom Delivery Option for Magento Customer Groups
 * Keep a track of Delivery Orders
 * Display Delivery Date & Time with an additional charge 
-* Manage Calendar Icon
        
               
 # Installation
